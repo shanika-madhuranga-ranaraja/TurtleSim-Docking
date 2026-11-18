@@ -1,0 +1,50 @@
+spawn_turtle_client:
+  ros__parameters:
+    initial_pose_turtle1: [5.0, 1.0, 0.0]
+    initial_pose_turtle2: [10.0, 1.0, 0.0]
+    initial_pose_turtle3: [1.0, 1.0, 0.0]
+
+docking_server_turtle1:
+  ros__parameters:
+    action_name: "/turtle1/dock"
+    linear_velocity: 0.40
+    angular_velocity: 0.25
+    position_tolerance: 0.10
+    angle_tolerance: 0.005
+
+docking_server_turtle2:
+  ros__parameters:
+    action_name: "/turtle2/dock"
+    linear_velocity: 0.20
+    angular_velocity: 0.25
+    position_tolerance: 0.10
+    angle_tolerance: 0.005
+
+docking_server_turtle3:
+  ros__parameters:
+    action_name: "/turtle3/dock"
+    linear_velocity: 0.25
+    angular_velocity: 0.25
+    position_tolerance: 0.10
+    angle_tolerance: 0.005
+
+docking_client_turtle1:
+  ros__parameters:
+    action_name: "/turtle1/dock"
+    initial_pose: [5.0, 1.0, 0.0]
+    docking_pose: [5.0, 9.0, -1.57]
+    initial_pose_tolerance: 0.20
+
+docking_client_turtle2:
+  ros__parameters:
+    action_name: "/turtle2/dock"
+    initial_pose: [10.0, 1.0, 0.0]
+    docking_pose: [1.0, 7.0, -0.78]
+    initial_pose_tolerance: 0.20
+
+docking_client_turtle3:
+  ros__parameters:
+    action_name: "/turtle3/dock"
+    initial_pose: [1.0, 1.0, 0.0]
+    docking_pose: [9.0, 7.0, -2.35]
+    initial_pose_tolerance: 0.20
